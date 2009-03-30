@@ -1,3 +1,9 @@
+e2fsprogs (1.41.4-4) asimov; urgency=low
+
+  * Removed extra versions from the development packages.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Mon, 30 Mar 2009 22:23:51 +0700
+
 e2fsprogs (1.41.4-3) asimov; urgency=low
 
   * Fixed dependencies for library packages.
