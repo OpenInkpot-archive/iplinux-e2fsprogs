@@ -1,8 +1,8 @@
 lib
 sbin
-usr/bin
-usr/sbin
+usr/bin/chattr
+usr/bin/lsattr
+usr/sbin/filefrag
+usr/sbin/mklost+found
 usr/lib/e2initrd_helper
-usr/share/man
-usr/share/locale
 etc
