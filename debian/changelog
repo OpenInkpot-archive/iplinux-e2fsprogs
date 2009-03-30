@@ -1,3 +1,9 @@
+e2fsprogs (1.41.4-3) asimov; urgency=low
+
+  * Fixed dependencies for library packages.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Mon, 30 Mar 2009 22:10:00 +0700
+
 e2fsprogs (1.41.4-2) asimov; urgency=low
 
   * First build for IPlinux.
