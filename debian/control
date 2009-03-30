@@ -18,7 +18,7 @@ Description: common error description library
 Package: comerr-dev
 Section: libdevel
 Priority: extra
-Depends: libc6-dev | libc-dev, libcomerr2 (= ${mainBinary})
+Depends: libc6-dev | libc-dev, libcomerr2 (= ${binary:Version})
 Architecture: any
 Description: common error description library - headers and static libraries
  libcom_err is an attempt to present a common error-handling mechanism to
@@ -41,7 +41,7 @@ Description: command-line interface parsing library
 Package: ss-dev
 Section: libdevel
 Priority: extra
-Depends: libc6-dev | libc-dev, libss2 (= ${mainBinary}), comerr-dev
+Depends: libc6-dev | libc-dev, libss2 (= ${binary:Version}), comerr-dev
 Architecture: any
 Description: command-line interface parsing library - headers and static libraries
  This package includes a tool that parses a command table to generate
@@ -79,7 +79,7 @@ Description: universally unique id library
 Package: uuid-dev
 Section: libdevel
 Priority: extra
-Depends: libc6-dev | libc-dev, libuuid1 (= ${mainBinary})
+Depends: libc6-dev | libc-dev, libuuid1 (= ${binary:Version})
 Architecture: any
 Description: universally unique id library - headers and static libraries
  libuuid generates and parses 128-bit universally unique id's (UUID's).

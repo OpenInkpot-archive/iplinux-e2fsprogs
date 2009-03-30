@@ -22,13 +22,9 @@ DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 MAIN_VERSION = $(shell head -n 1 debian/changelog | cut '-d ' -f 2 | sed 's/[()]//g')
 # find versions for libraries going into their own packages, from their Makefile.in's,
 # and sonames for all libs
-COMERR_VERSION = $(shell grep ELF_VERSION lib/et/Makefile.in | cut '-d ' -f3)
 COMERR_SOVERSION = $(shell grep ELF_SO_VERSION lib/et/Makefile.in | cut '-d ' -f3)
-SS_VERSION = $(shell grep ELF_VERSION lib/ss/Makefile.in | cut '-d ' -f3)
 SS_SOVERSION = $(shell grep ELF_SO_VERSION lib/ss/Makefile.in | cut '-d ' -f3)
-UUID_VERSION = $(shell grep ELF_VERSION lib/uuid/Makefile.in | cut '-d ' -f3)
 UUID_SOVERSION = $(shell grep ELF_SO_VERSION lib/uuid/Makefile.in | cut '-d ' -f3)
-BLKID_VERSION = $(shell grep ELF_VERSION lib/blkid/Makefile.in | cut '-d ' -f3)
 BLKID_SOVERSION = $(shell grep ELF_SO_VERSION lib/blkid/Makefile.in | cut '-d ' -f3)
 EXT2FS_SOVERSION = $(shell grep ELF_SO_VERSION lib/ext2fs/Makefile.in | cut '-d ' -f3)
 E2P_SOVERSION = $(shell grep ELF_SO_VERSION lib/e2p/Makefile.in | cut '-d ' -f3)
@@ -308,14 +304,7 @@ endif
 	dh_shlibdeps -pe2fsprogs -l${stdbuilddir}/lib \
 		-u"-Ldebian/e2fsprogs.shlibs.local"
 
-	dh_gencontrol -Ncomerr-dev -Nss-dev -Nuuid-dev
-	DH_OPTIONS= dh_gencontrol -pcomerr-dev \
-	  -u '-v${COMERR_VERSION}-${MAIN_VERSION} -VmainBinary=${MAIN_VERSION}'
-	DH_OPTIONS= dh_gencontrol -pss-dev \
-	  -u '-v${SS_VERSION}-${MAIN_VERSION} -VmainBinary=${MAIN_VERSION}'
-	DH_OPTIONS= dh_gencontrol -puuid-dev \
-	  -u '-v${UUID_VERSION}-${MAIN_VERSION} -VmainBinary=${MAIN_VERSION}'
-
+	dh_gencontrol
 	dh_builddeb
 
 binary: binary-indep binary-arch
