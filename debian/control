@@ -19,7 +19,6 @@ Package: comerr-dev
 Section: libdevel
 Priority: extra
 Depends: libc6-dev | libc-dev, libcomerr2 (= ${mainBinary})
-Suggests: doc-base
 Architecture: any
 Description: common error description library - headers and static libraries
  libcom_err is an attempt to present a common error-handling mechanism to
@@ -30,8 +29,7 @@ Description: common error description library - headers and static libraries
 
 Package: libss2
 Priority: required
-Depends: libcomerr2, ${shlibs:Depends}
-Replaces: e2fsprogs (<< 1.34-1)
+Depends: ${shlibs:Depends}
 Architecture: any
 Description: command-line interface parsing library
  This package includes a tool that parses a command table to generate
@@ -56,8 +54,7 @@ Description: command-line interface parsing library - headers and static librari
 
 Package: libuuid1
 Priority: required
-Depends: passwd, ${shlibs:Depends}
-Recommends: uuid-runtime
+Depends: ${shlibs:Depends}
 Architecture: any
 Description: universally unique id library
  libuuid generates and parses 128-bit universally unique id's (UUID's).
@@ -65,7 +62,7 @@ Description: universally unique id library
 
 Package: uuid-runtime
 Priority: optional
-Depends: libuuid1 (>> 1.40.3-1), ${shlibs:Depends}
+Depends: ${shlibs:Depends}
 Architecture: any
 Description: universally unique id library
  libuuid generates and parses 128-bit universally unique id's (UUID's).
@@ -145,7 +142,6 @@ Package: e2fsprogs
 Essential: yes
 Pre-Depends: ${shlibs:Depends}
 Depends: 
-Suggests: gpart, parted, e2fsck-static
 Architecture: any
 Description: ext2/ext3/ext4 file system utilities
  The ext2, ext3 and ext4 file systems are successors of the original ext
