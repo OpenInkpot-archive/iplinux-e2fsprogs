@@ -139,7 +139,6 @@ Description: ext2 filesystem libraries - headers and static libraries
  libraries.
 
 Package: e2fsprogs
-Essential: yes
 Pre-Depends: ${shlibs:Depends}
 Depends: 
 Architecture: any
