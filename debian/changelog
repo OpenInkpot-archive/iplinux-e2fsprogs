@@ -1,3 +1,9 @@
+e2fsprogs (1.41.4-5) asimov; urgency=low
+
+  * "Essential: yes" removed to Avoid installing e2fsprogs automatically.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Thu, 02 Apr 2009 04:12:22 +0700
+
 e2fsprogs (1.41.4-4) asimov; urgency=low
 
   * Removed extra versions from the development packages.
