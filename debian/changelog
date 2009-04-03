@@ -1,3 +1,9 @@
+e2fsprogs (1.41.4-6) asimov; urgency=low
+
+  * Rebuild with new toolchain.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Fri, 03 Apr 2009 18:57:14 +0700
+
 e2fsprogs (1.41.4-5) asimov; urgency=low
 
   * "Essential: yes" removed to Avoid installing e2fsprogs automatically.
